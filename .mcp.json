@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lawdiver": {
+      "type": "http",
+      "url": "https://lawdiver.com/mcp"
+    }
+  }
+}
