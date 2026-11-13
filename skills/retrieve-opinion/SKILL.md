@@ -20,10 +20,12 @@ Use LawDiver MCP tools only. Never invent opinion language.
 3. Call `get_opinion_text` with the confirmed `caseId`.
 4. If `truncated` is true, call again with `offset` / `nextOffset` until you have the needed passages (or the full body).
 5. Quote only text returned by `get_opinion_text`. Prefer that tool over PDFs or search excerpts.
-6. Optionally call `get_good_law` or rely on treatment fields from prior tools when the user asks whether the case is still good law.
+6. Optionally call `get_good_law` or `goodlaw_check` when the user asks whether the case is still good law.
+7. If the user wants to **see** or **open** the case in the interactive viewer (Claude web/desktop), call `view_case` with the citation or `caseId`. That returns metadata only — still use `get_opinion_text` before quoting.
 
 ## Do not
 
 - Invent pin cites or quote language not present in the returned body
 - Treat search `includeOpinionText` excerpts as a substitute for `get_opinion_text`
 - Claim the full opinion was retrieved if the body is still truncated and you stopped early without saying so
+

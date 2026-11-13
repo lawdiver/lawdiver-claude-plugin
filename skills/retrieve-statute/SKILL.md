@@ -17,10 +17,13 @@ Use LawDiver MCP tools only. Never invent statutory wording.
 1. Call `retrieve_statute` with a Bluebook-style citation that includes a section number, or with `authorityKey` from a prior `check_citation` hit.
 2. If the citation is incomplete (missing section), ask for the section number before calling.
 3. Return the section body and identifying metadata from the tool. If truncated, follow any pagination fields the tool returns.
-4. If the lookup fails, say the section was not found in LawDiver. Do not paste a guessed version of the statute.
+4. If the user wants to **see** or **open** the provision in the interactive viewer, call `view_authority` with the citation or `authorityKey`.
+5. Optional follow-ups: `get_statute_citing_cases` (cases citing the section) or `browse_statute` (neighbours / breadcrumbs) with `authorityKey`.
+6. If the lookup fails, say the section was not found in LawDiver. Do not paste a guessed version of the statute.
 
 ## Do not
 
 - Fabricate statutory text
-- Use this skill for case opinions (use retrieve-opinion)
+- Use this skill for case opinions (use retrieve-opinion / `view_case`)
 - Claim LawDiver covers every jurisdiction’s entire code if a lookup misses
+

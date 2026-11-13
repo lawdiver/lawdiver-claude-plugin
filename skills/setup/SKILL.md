@@ -17,7 +17,7 @@ This plugin bundles a remote MCP connector at `https://lawdiver.com/mcp`. It shi
 1. Confirm the plugin is enabled (`/plugin` → Installed, or `claude plugin list`).
 2. Run `/mcp`, select the **lawdiver** server from this plugin, and choose **Authenticate**.
 3. Complete LawDiver sign-in in the browser and allow access.
-4. Confirm tools appear: `search_cases`, `retrieve_case`, `retrieve_statute`, `get_case`, `get_opinion_text`, `get_good_law`, `check_citation`, `list_jurisdictions`.
+4. Confirm tools appear, including: `search_cases`, `retrieve_case`, `retrieve_statute`, `view_case`, `view_authority`, `get_case`, `get_opinion_text`, `get_good_law`, `goodlaw_check`, `check_citation`, `get_statute_citing_cases`, `browse_statute`, `list_jurisdictions`.
 
 ## Cowork
 
@@ -27,7 +27,7 @@ This plugin bundles a remote MCP connector at `https://lawdiver.com/mcp`. It shi
 
 ## Verify
 
-Ask: “Using LawDiver, is 410 U.S. 113 still good law?” Claude should call LawDiver tools (for example `check_citation` / `get_good_law`) and answer from tool results only.
+Ask: “Using LawDiver, is Chevron still good law? Open the case in the viewer.” Claude should call LawDiver (`view_case` and/or `get_good_law`) and answer from tool results only. On Claude web and desktop, the interactive case viewer can open.
 
 ## Re-authenticate
 

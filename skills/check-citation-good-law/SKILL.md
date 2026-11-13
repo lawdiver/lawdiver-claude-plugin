@@ -17,9 +17,10 @@ Use LawDiver MCP tools only.
 
 1. Call `check_citation` with the citation string(s) the user provided.
 2. Report match vs no-match clearly. For case hits, include good-law / treatment signals from the tool result when present.
-3. If the user wants more on a matched case, call `retrieve_case` and/or `get_good_law` with the `caseId`.
-4. For statute/rule or specialty hits that include `authorityKey`, use `retrieve_statute` when the user wants the section text.
+3. If the user wants more on a matched case, call `retrieve_case` and/or `get_good_law` / `goodlaw_check` with the `caseId`. To open it in the interactive viewer, call `view_case`.
+4. For statute/rule or specialty hits that include `authorityKey`, use `retrieve_statute` or `view_authority` when the user wants the section text or the viewer.
 5. If nothing matches, say so. Do not substitute a “similar” invented cite.
+
 
 ## Do not
 

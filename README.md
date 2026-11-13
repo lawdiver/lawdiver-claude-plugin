@@ -8,8 +8,14 @@ This repository is the **public Claude plugin package**. It is separate from the
 
 | Component | Purpose |
 |---|---|
-| Remote MCP (`https://lawdiver.com/mcp`) | Tools: search, retrieve case/statute/opinion, check citations, good-law, jurisdictions |
-| Skills | `setup`, `caselaw-research`, `retrieve-opinion`, `check-citation-good-law`, `retrieve-statute` |
+| Remote MCP (`https://lawdiver.com/mcp`) | Tools: search, retrieve case/statute/opinion, interactive viewer (`view_case`, `view_authority`), citation checks, good-law, statute browse/citing cases, jurisdictions |
+| Skills | `setup`, `caselaw-research`, `retrieve-opinion`, `check-citation-good-law`, `retrieve-statute`, `view-case-or-authority` |
+
+### MCP tools (live at `/mcp`)
+
+`search_cases`, `retrieve_case`, `retrieve_statute`, `get_statute_citing_cases`, `browse_statute`, `get_case`, `get_opinion_text`, `get_good_law`, `goodlaw_check`, `check_citation`, `list_jurisdictions`, `view_case`, `view_authority`
+
+`view_case` / `view_authority` open LawDiver’s interactive viewer on Claude web and desktop (opinion or authority text, good-law badges, Cited by). Other clients still receive the structured tool result. Full catalog: https://lawdiver.com/mcp/toolspec.json
 
 ## Install (after directory listing)
 
@@ -25,7 +31,7 @@ claude --plugin-dir ./plugins/claude-lawdiver
 
 Then run `/mcp`, authenticate **lawdiver**, and try:
 
-> Using LawDiver, is 410 U.S. 113 still good law?
+> Using LawDiver, is Chevron still good law? Open the case in the viewer.
 
 ## Authentication
 
@@ -37,6 +43,7 @@ Create an account at https://lawdiver.com if you do not already have one.
 ## Documentation
 
 - Product / MCP setup: https://lawdiver.com/products/mcp
+- Claude connect guide: https://lawdiver.com/products/mcp/connect-claude
 - Privacy: https://lawdiver.com/privacy
 - Terms: https://lawdiver.com/terms
 
