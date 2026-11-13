@@ -1,7 +1,7 @@
 {
   "name": "lawdiver",
   "displayName": "LawDiver",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Search and verify U.S. federal and state caselaw, statutes, and citations with LawDiver. Jurisdiction-scoped research, interactive case and authority viewer, full opinion text, citation checks, and good-law / treatment signals.",
   "author": {
     "name": "LawDiver",
@@ -12,6 +12,9 @@
   "repository": "https://github.com/lawdiver/lawdiver-claude-plugin",
   "license": "MIT",
   "privacyPolicyUrl": "https://lawdiver.com/privacy",
+  "termsOfServiceUrl": "https://lawdiver.com/terms",
+  "documentationUrl": "https://lawdiver.com/products/mcp",
+  "supportUrl": "mailto:support@lawdiver.com",
   "keywords": [
     "legal",
     "caselaw",
