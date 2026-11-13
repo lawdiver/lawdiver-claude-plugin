@@ -17,16 +17,18 @@ This repository is the **public Claude plugin package**. It is separate from the
 
 `view_case` / `view_authority` open LawDiver’s interactive viewer on Claude web and desktop (opinion or authority text, good-law badges, Cited by). Other clients still receive the structured tool result. Full catalog: https://lawdiver.com/mcp/toolspec.json
 
-## Install (after directory listing)
+## Install
 
-Once published in Anthropic’s plugin directory / community marketplace, install from Claude Code or Cowork using the in-product Plugins UI, then authenticate LawDiver via `/mcp` (OAuth).
+```bash
+/plugin install lawdiver
+```
 
-Until then, test locally:
+Or install **LawDiver** from Claude Code / Cowork Plugins UI, then authenticate via `/mcp` (OAuth).
+
+Local checkout (development):
 
 ```bash
 claude --plugin-dir .
-# or from a parent folder:
-claude --plugin-dir ./plugins/claude-lawdiver
 ```
 
 Then run `/mcp`, authenticate **lawdiver**, and try:

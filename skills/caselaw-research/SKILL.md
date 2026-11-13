@@ -27,11 +27,6 @@ Use LawDiver MCP tools only. Never invent case names, citations, holdings, or go
 6. If the user wants to open a hit on screen, call `view_case` with that `caseId` or citation (metadata only; still use `get_opinion_text` before quoting).
 7. Answer with cited authorities from tool results only. Flag negative treatment / not-good-law when tools report it.
 
-
-## Agency decisions
-
-When the question is about an immigration agency decision or guidance rather than a court opinion — BIA or Attorney General precedent, the USCIS Policy Manual, AAO, OCAHO, BALCA, or the Foreign Affairs Manual — and `search_agency_decisions` is listed, call it with `lane` `immigration` or one immigration `agency`. Each hit says whether it is precedential. Use `search_cases` for court opinions, including securities, labor, environmental, patent-board, and trade opinions. If `search_cases` returns `agencyLanes`, follow the hint and call `search_agency_decisions` for that lane. An empty list is not proof the authority does not exist.
-
 ## Do not
 
 - Fabricate citations or quote language that did not come from LawDiver tools
